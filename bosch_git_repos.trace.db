@@ -1,0 +1,13 @@
+2022-11-07 13:36:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DATABASECHANGELOGLOCK" not found (this database is empty); SQL statement:
+SELECT COUNT(*) FROM PUBLIC.DATABASECHANGELOGLOCK [42104-214]
+2022-11-07 13:36:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "CREATE TABLE bosch_repos\000a(\000a    id SERIAL PRIMARY KEY NOT NULL,\000a    fullName VARCHAR(50) NOT NULL,\000a    description VARCHAR(256) NOT NULL,\000a    programmingLanguage VARCHAR(50) NOT NULL,\000a    htmlUrl VARCHAR(256) NOT NULL,\000a[*])"; expected "identifier"; SQL statement:
+CREATE TABLE bosch_repos
+(
+    id SERIAL PRIMARY KEY NOT NULL,
+    fullName VARCHAR(50) NOT NULL,
+    description VARCHAR(256) NOT NULL,
+    programmingLanguage VARCHAR(50) NOT NULL,
+    htmlUrl VARCHAR(256) NOT NULL,
+) [42001-214]

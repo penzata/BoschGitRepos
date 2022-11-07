@@ -1,1 +1,9 @@
-
+spring:
+  datasource:
+    url: jdbc:h2:file:./bosch_git_repos
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: password
+jpa:
+  hibernate:
+    ddl-auto: update
