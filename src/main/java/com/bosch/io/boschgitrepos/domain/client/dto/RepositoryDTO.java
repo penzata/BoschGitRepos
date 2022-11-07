@@ -1,8 +1,8 @@
 package com.bosch.io.boschgitrepos.domain.client.dto;
 
 public record RepositoryDTO (Integer id,
-                             String fullName,
+                             String full_name,
                              String description,
-                             String programmingLanguage,
-                             String htmlUrl){
+                             String language,
+                             String html_url){
 }

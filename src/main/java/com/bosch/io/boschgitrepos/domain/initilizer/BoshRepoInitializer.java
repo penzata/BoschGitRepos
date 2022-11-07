@@ -17,8 +17,8 @@ public class BoshRepoInitializer implements InitializingBean {
     public void afterPropertiesSet() throws Exception {
         //todo extract this into constant
         //todo add while loop to get all pages
-        gitHubClient.getPublicRepos("bosch-io", 1, 30)
-                        .forEach(repo -> System.out.println(repo.id()));
+        gitHubClient.getAllPublicRepos()
+                        .forEach(System.out::println);
 
     }
 }

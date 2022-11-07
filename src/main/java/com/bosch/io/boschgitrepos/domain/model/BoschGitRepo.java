@@ -28,40 +28,20 @@ public class BoschGitRepo {
         return id;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
     public String getFullName() {
         return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
     }
 
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public String getProgrammingLanguage() {
         return programmingLanguage;
     }
 
-    public void setProgrammingLanguage(String programmingLanguage) {
-        this.programmingLanguage = programmingLanguage;
-    }
-
     public String getHtmlUrl() {
         return htmlUrl;
-    }
-
-    public void setHtmlUr(String htmlUrl) {
-        this.htmlUrl = htmlUrl;
     }
 }
 
