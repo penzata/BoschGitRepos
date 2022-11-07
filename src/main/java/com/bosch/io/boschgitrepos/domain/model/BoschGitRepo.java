@@ -6,8 +6,8 @@ import javax.persistence.*;
 @Table(name="bosch_repos")
 public class BoschGitRepo {
     @Id
-    @Column(columnDefinition = "serial")
-    private String id;
+    @Column(columnDefinition = "SERIAL")
+    private Integer id;
     private String fullName;
     private String description;
     private String programmingLanguage;
@@ -16,7 +16,7 @@ public class BoschGitRepo {
     public BoschGitRepo() {
     }
 
-    public BoschGitRepo(String id, String fullName, String description, String programmingLanguage, String htmlUrl) {
+    public BoschGitRepo(Integer id, String fullName, String description, String programmingLanguage, String htmlUrl) {
         this.id = id;
         this.fullName = fullName;
         this.description = description;
@@ -24,11 +24,11 @@ public class BoschGitRepo {
         this.htmlUrl = htmlUrl;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

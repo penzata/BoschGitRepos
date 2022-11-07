@@ -5,4 +5,4 @@ CREATE TABLE bosch_repos
     description VARCHAR(256) NOT NULL,
     programmingLanguage VARCHAR(50) NOT NULL,
     htmlUrl VARCHAR(256) NOT NULL
-)d
+)

@@ -8,5 +8,5 @@ public interface BoschGitRepoService {
 
     List<BoschGitRepo> saveBoshGitRepos(List<BoschGitRepo> boschGitRepos);
 
-    List<BoschGitRepo> findBoshGitRepos();
+    List<BoschGitRepo> getPublicBoshGitRepos();
 }

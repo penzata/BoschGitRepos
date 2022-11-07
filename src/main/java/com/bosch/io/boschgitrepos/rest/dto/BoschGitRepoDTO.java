@@ -2,7 +2,7 @@ package com.bosch.io.boschgitrepos.rest.dto;
 
 import com.bosch.io.boschgitrepos.domain.model.BoschGitRepo;
 
-public record BoschGitRepoDTO(String id,
+public record BoschGitRepoDTO(Integer id,
                               String fullName,
                               String description,
                               String programmingLanguage,

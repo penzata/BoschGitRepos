@@ -20,7 +20,7 @@ public class BoschGitRepoServiceImpl implements BoschGitRepoService {
     }
 
     @Override
-    public List<BoschGitRepo> findBoshGitRepos() {
+    public List<BoschGitRepo> getPublicBoshGitRepos() {
         return boschGitRepoRepository.findAll();
     }
 }
