@@ -8,10 +8,6 @@ public record BoschGitRepoDTO(Integer id,
                               String programmingLanguage,
                               String htmlUrl) {
 
-    public BoschGitRepo toModel() {
-        return new BoschGitRepo(id, fullName, description, programmingLanguage, htmlUrl);
-    }
-
     public static BoschGitRepoDTO fromModel(BoschGitRepo boschGitRepo) {
         return new BoschGitRepoDTO(boschGitRepo.getId(),
                 boschGitRepo.getFullName(),
