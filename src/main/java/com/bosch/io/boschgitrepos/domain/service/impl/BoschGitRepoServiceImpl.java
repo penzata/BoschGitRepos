@@ -3,8 +3,13 @@ package com.bosch.io.boschgitrepos.domain.service.impl;
 import com.bosch.io.boschgitrepos.domain.model.BoschGitRepo;
 import com.bosch.io.boschgitrepos.domain.service.BoschGitRepoService;
 import com.bosch.io.boschgitrepos.persistence.repository.BoschGitRepoRepository;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
 import org.springframework.stereotype.Service;
+
 import java.util.List;
+
+import static com.bosch.io.boschgitrepos.domain.model.BoschGitRepo.*;
 
 @Service
 public class BoschGitRepoServiceImpl implements BoschGitRepoService {
@@ -23,5 +28,18 @@ public class BoschGitRepoServiceImpl implements BoschGitRepoService {
     @Override
     public List<BoschGitRepo> getPublicBoshGitRepos() {
         return boschGitRepoRepository.findAll();
+    }
+
+    @Override
+    public List<BoschGitRepo> getPublicBoshGitRepos(BoschGitRepo repoQueryExample) {
+
+        ExampleMatcher customExampleMatcher = ExampleMatcher.matching()
+                .withMatcher(FULL_NAME, ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
+                .withMatcher(DESCRIPTION, ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
+                .withMatcher(LANGUAGE, ExampleMatcher.GenericPropertyMatchers.exact().ignoreCase());
+
+        Example<BoschGitRepo> example = Example.of(repoQueryExample, customExampleMatcher);
+
+        return boschGitRepoRepository.findAll(example);
     }
 }
