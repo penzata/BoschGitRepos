@@ -1,20 +1,15 @@
 client:
   post:
-    baseUrl: https://api.github.com/users/bosch-io
+    baseUrl: https://api.github.com
 
-server:
-  port: 8080
-
+#for saving database file on hdd
 spring:
   datasource:
     url: jdbc:h2:~/data/bosch_git_repos
     driver-class-name: org.h2.Driver
     username: sa
     password: password
-jpa:
-  database-platform: org.hibernate.dialect.H2Dialect
-  hibernate:
-    ddl-auto: update
-h2:
-  console:
-    enabled: true
+
+logging:
+  level:
+    org.hibernate.SQL: DEBUG
