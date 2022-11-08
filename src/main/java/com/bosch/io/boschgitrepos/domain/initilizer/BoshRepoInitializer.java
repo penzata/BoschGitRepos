@@ -28,7 +28,8 @@ public class BoshRepoInitializer implements InitializingBean {
 
         while (pageSize > 0) {
             List<BoschGitRepo> allRepos = gitHubClient.getAllPublicRepos(page).stream()
-                    .map(RepositoryDTO::toModel).toList();
+                    .map(RepositoryDTO::toModel)
+                    .toList();
 
             pageSize = allRepos.size();
 
