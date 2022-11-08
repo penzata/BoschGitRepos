@@ -36,7 +36,7 @@ public class BoschGitRepoServiceImpl implements BoschGitRepoService {
         ExampleMatcher customExampleMatcher = ExampleMatcher.matching()
                 .withMatcher(FULL_NAME, ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
                 .withMatcher(DESC, ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase())
-                .withMatcher(LANGUAGE, ExampleMatcher.GenericPropertyMatchers.contains().ignoreCase());
+                .withMatcher(LANGUAGE, ExampleMatcher.GenericPropertyMatchers.exact().ignoreCase());
 
         Example<BoschGitRepo> example = Example.of(repoQueryExample, customExampleMatcher);
 
