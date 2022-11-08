@@ -2,14 +2,15 @@ client:
   post:
     baseUrl: https://api.github.com
 
-#for saving database file on hdd
-spring:
-  datasource:
-    url: jdbc:h2:~/data/bosch_git_repos
-    driver-class-name: org.h2.Driver
-    username: sa
-    password: password
+##for saving bosch repos file on hdd
+#spring:
+#  datasource:
+#    url: jdbc:h2:~/data/bosch_git_repos
+#    driver-class-name: org.h2.Driver
+#    username: sa
+#    password: password
 
-logging:
-  level:
-    org.hibernate.SQL: DEBUG
+##for logging SQL queries
+#logging:
+#  level:
+#    org.hibernate.SQL: DEBUG
