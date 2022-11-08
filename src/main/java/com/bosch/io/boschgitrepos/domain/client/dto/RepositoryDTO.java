@@ -11,11 +11,7 @@ public record RepositoryDTO(Integer id,
                             @JsonProperty("html_url")
                             String htmlUrl) {
 
-    public static BoschGitRepo toModel(RepositoryDTO repositoryDTO) {
-        return new BoschGitRepo(repositoryDTO.id(),
-                repositoryDTO.fullName(),
-                repositoryDTO.description(),
-                repositoryDTO.language(),
-                repositoryDTO.htmlUrl());
+    public BoschGitRepo toModel() {
+        return new BoschGitRepo(id, fullName, description, language, htmlUrl);
     }
 }
