@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class BoschGitRepo {
 
     public static final String FULL_NAME = "fullName";
-    public static final String DESCRIPTION = "description";
+    public static final String DESC = "description";
     public static final String LANGUAGE = "programmingLanguage";
 
     @Id
