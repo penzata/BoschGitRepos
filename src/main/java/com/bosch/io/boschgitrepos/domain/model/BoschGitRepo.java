@@ -1,9 +1,12 @@
 package com.bosch.io.boschgitrepos.domain.model;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="bosch_repos")
+@Table(name = "bosch_repos")
 public class BoschGitRepo {
 
     public static final String FULL_NAME = "fullName";
